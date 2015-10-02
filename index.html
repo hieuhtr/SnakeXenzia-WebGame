@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>SNAKE: HTML5</title>
+    <script type="text/javascript" src = "js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src = "js/script.js"></script>
+    <script type="text/javascript" src = "js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+</head>
+<body>
+	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#gameModal">Play</button>
+
+	<div class="modal fade bs-example-modal-sm" id="gameModal" role="dialog"  tabindex="-1">
+		<div class="modal-dialog bs-example-modal-sm" role = "document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<strong>Snake</strong>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>	
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-7" id="wrapper">
+					        <div id="score">Score: 0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Level: 1</div>
+					        <canvas width="300" height="400" id="canvas">
+					        </canvas>
+					        <div id="control">Controls: W = Up; A = Left; S = Down; D = Right</div>
+					    </div>
+						<div class="col-md-5">
+							<button id="playBtn">&#9658</button>
+							<button onclick="setStage(0)">Level 0</button>
+							<button onclick="setStage(1)">Level 1</button>
+							<button onclick="setStage(2)">Level 2</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
